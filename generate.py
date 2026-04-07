@@ -11,6 +11,7 @@ import urllib.error
 from datetime import datetime, timezone
 
 GITHUB_USER = "CrowntailTW0608"
+THIS_REPO = "crowntail-hub"
 API_URL = f"https://api.github.com/users/{GITHUB_USER}/repos?per_page=100"
 OUTPUT_FILE = os.path.join(os.path.dirname(__file__), "index.html")
 
@@ -158,7 +159,7 @@ def build_html(sites: "list[dict]", updated_at: str) -> str:
 def main():
     print("抓取 GitHub repo 清單...")
     repos = fetch_repos()
-    pages_repos = [r for r in repos if r.get("has_pages")]
+    pages_repos = [r for r in repos if r.get("has_pages") and r["name"] != THIS_REPO]
     print(f"找到 {len(pages_repos)} 個啟用 Pages 的 repo")
 
     sites = []
