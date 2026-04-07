@@ -22,23 +22,4 @@ GitHub API  →  篩選啟用 Pages 的 repo
 
 ---
 
-## 手動觸發更新
-
-新增了一個 Pages 站想立刻看到它出現在入口頁？
-
-**方法一：GitHub Actions UI**
-> repo → Actions → **Update Pages Index** → **Run workflow**
-
-**方法二：本機執行**
-```bash
-python generate.py
-```
-
-搭配 `GITHUB_TOKEN` 可避免 API rate limit：
-```bash
-GITHUB_TOKEN=ghp_xxx python generate.py
-```
-
----
-
 > `index.html` 由程式自動產生，請勿手動編輯。

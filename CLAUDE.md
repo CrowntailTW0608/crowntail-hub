@@ -17,7 +17,7 @@ crowntail-hub/
 ├── index.html                      # 入口頁面（由 generate.py 自動產生，勿手動編輯）
 ├── generate.py                     # 掃描 GitHub API 並產生 index.html
 └── .github/workflows/
-    └── update-pages.yml            # GitHub Actions：定期 + 手動觸發自動更新
+    └── update-pages.yml            # GitHub Actions：每週一 UTC 02:00 自動執行
 ```
 
 ## 運作流程
@@ -28,18 +28,10 @@ crowntail-hub/
 4. 產生 `index.html`，寫入最後更新時間
 5. GitHub Actions 若偵測到 `index.html` 有變動才 commit，避免空 commit
 
-## 執行方式
-
-本機手動產生 index.html：
-```bash
-python generate.py
-```
-
 ## GitHub Actions 觸發方式
 
-- **手動**：GitHub repo → Actions → update-pages → Run workflow
-- **定期**：每週一 UTC 02:00 自動執行
+每週一 UTC 02:00 自動執行。
 
 ## 新增 Pages 站後的更新方式
 
-不需手動修改任何檔案，等下次 Actions 自動執行，或手動觸發 workflow 即可。
+不需手動修改任何檔案，等下次 Actions 自動執行即可。
