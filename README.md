@@ -37,3 +37,5 @@ https://docs.github.com/en/actions/reference/workflows-and-actions/contexts
 https://docs.github.com/en/actions/reference/workflows-and-actions/variables
 
 
+### Exercise - Using GitHub Script in GitHub Actions
+https://learn.microsoft.com/en-us/training/modules/automate-github-using-github-script/3-use-github-script?ns-enrollment-type=learningpath&ns-enrollment-id=learn.github-actions
