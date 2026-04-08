@@ -47,3 +47,6 @@ https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-synt
 
 ### 修改 GITHUB_TOKEN 的权限
 https://docs.github.com/zh/actions/tutorials/authenticate-with-github_token#modifying-the-permissions-for-the-github_token
+
+### 创建组合操作
+https://docs.github.com/zh/actions/tutorials/create-actions/create-a-composite-action
