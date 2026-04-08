@@ -23,3 +23,9 @@ GitHub API  →  篩選啟用 Pages 的 repo
 ---
 
 > `index.html` 由程式自動產生，請勿手動編輯。
+
+
+---------------------------------------
+2026-4-8 github automation material note
+https://learn.microsoft.com/zh-tw/training/paths/github-actions/
+https://learn.microsoft.com/zh-tw/training/paths/github-actions-2/
