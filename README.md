@@ -26,7 +26,14 @@ GitHub API  →  篩選啟用 Pages 的 repo
 
 
 ---------------------------------------
-2026-4-8 github automation material note
+2026-4-8 github automation material note  
 https://learn.microsoft.com/zh-tw/training/paths/github-actions/  
 https://learn.microsoft.com/zh-tw/training/paths/github-actions-2/  
 https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows  
+
+### Contexts reference
+https://docs.github.com/en/actions/reference/workflows-and-actions/contexts  
+### Variables reference
+https://docs.github.com/en/actions/reference/workflows-and-actions/variables
+
+
