@@ -39,3 +39,11 @@ https://docs.github.com/en/actions/reference/workflows-and-actions/variables
 
 ### Exercise - Using GitHub Script in GitHub Actions
 https://learn.microsoft.com/en-us/training/modules/automate-github-using-github-script/3-use-github-script?ns-enrollment-type=learningpath&ns-enrollment-id=learn.github-actions
+
+
+
+### Workflow syntax for GitHub Actions
+https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax
+
+### 修改 GITHUB_TOKEN 的权限
+https://docs.github.com/zh/actions/tutorials/authenticate-with-github_token#modifying-the-permissions-for-the-github_token
