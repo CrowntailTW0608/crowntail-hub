@@ -74,6 +74,11 @@ def build_html(sites: "list[dict]", updated_at: str) -> str:
     body {{
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background: #0d1117;
+      background-image: radial-gradient(
+        circle 1200px at var(--cx, -9999px) var(--cy, -9999px),
+        rgba(88, 166, 255, 0.07),
+        transparent 70%
+      );
       color: #c9d1d9;
       min-height: 100vh;
       padding: 2rem 1rem;
@@ -140,17 +145,45 @@ def build_html(sites: "list[dict]", updated_at: str) -> str:
       color: #8b949e;
       margin-top: 4rem;
     }}
+    .gh-link {{
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      color: #8b949e;
+      text-decoration: none;
+      transition: color .2s;
+    }}
+    .gh-link:hover {{
+      color: #f0f6fc;
+    }}
   </style>
 </head>
 <body>
   <header>
     <h1>Crowntail Pages Hub</h1>
-    <p>@{GITHUB_USER} 的所有 GitHub Pages 站台</p>
+    <p>
+      <a href="https://github.com/{GITHUB_USER}" target="_blank" rel="noopener" class="gh-link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="18" height="18" aria-label="GitHub" fill="currentColor">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.68 7.68 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+        @{GITHUB_USER}
+      </a> 的所有 GitHub Pages 站台
+    </p>
   </header>
   {"<div class='grid'>" + cards + "</div>" if sites else "<p class='empty'>目前沒有可連線的 GitHub Pages 站台。</p>"}
   <footer>
     <p>最後更新：{updated_at}</p>
   </footer>
+  <script>
+    document.addEventListener('mousemove', (e) => {{
+      document.body.style.setProperty('--cx', e.clientX + 'px');
+      document.body.style.setProperty('--cy', e.clientY + 'px');
+    }});
+    document.addEventListener('mouseleave', () => {{
+      document.body.style.setProperty('--cx', '-9999px');
+      document.body.style.setProperty('--cy', '-9999px');
+    }});
+  </script>
 </body>
 </html>
 """
